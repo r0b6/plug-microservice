@@ -25,6 +25,12 @@ defmodule PlugMicroservice.Router do
       |> handle_response(conn, &OpenWeatherMapClient.parse_wind/1)
   end
 
+  get _ do
+    conn
+      |> put_resp_content_type("application/json")
+      |> send_resp(404, Poison.encode!(%{reason: "Data not found"}))
+  end
+
   defp parse_body(body, transform_fn) do
     handle_poison_parse = fn
       {:ok, value} -> value
