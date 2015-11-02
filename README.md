@@ -78,3 +78,9 @@ $ rel/plug_microservice/bin/plug_microservice console
 ## Tips
 
 For easier Elixir file editing, use Sublime Text Package Control to install the [Elixir bundle](https://github.com/elixir-lang/elixir-tmbundle)
+
+If you want to create your own boilerplate Elixir project with supervisor related files, run the following command in another directory
+
+```
+$ mix new --app your_new_app your-new-app --sup
+```
