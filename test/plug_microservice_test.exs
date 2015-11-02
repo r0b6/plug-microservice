@@ -37,8 +37,9 @@ defmodule PlugMicroserviceTest do
   # Mock helper functions
   #
   defp build_httpoison_mocks(search_term, mocks) do
-  	{:ok, expected_json} = File.read(Enum.join(["test/open_weather_map_api_data", mocks[:search_by_city]]))
-	weather_uri = [@weather_api_url, "/weather"] |> Enum.join()
+    {:ok, expected_json} = File.read(Enum.join(["test/open_weather_map_api_data", mocks[:search_by_city]]))
+
+    weather_uri = [@weather_api_url, "/weather"] |> Enum.join()
 
   	fn (uri) ->
   		uri_parts = URI.parse(uri) |> Map.from_struct
