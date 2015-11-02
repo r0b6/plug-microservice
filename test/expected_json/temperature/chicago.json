@@ -1,0 +1,8 @@
+{
+    "temperature": {
+        "units": "Fahrenheit",
+        "low": 46.50,
+        "high": 50.02,
+        "current": 48.04
+    }
+}

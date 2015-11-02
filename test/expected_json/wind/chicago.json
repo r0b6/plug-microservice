@@ -1,0 +1,12 @@
+{
+    "wind": {
+        "speed": {
+            "value": 8.47,
+            "units": "mph"
+        },
+        "direction": {
+            "value": 189.504,
+            "units": "degrees"
+        }
+    }
+}
